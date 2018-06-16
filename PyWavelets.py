@@ -19,8 +19,7 @@ import numpy as np
 
 def PrintReconstructions(coeffs, n):
     arr, coeff_slices = pywt.coeffs_to_array(coeffs)
-    #Removing Approximation
-#    arr[coeff_slices[0]] = 0 
+
     #Removing Details
     for i in range(n,len(coeff_slices)):
         arr[coeff_slices[i]['ad']] = 0
